@@ -1,3 +1,4 @@
+import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { Button, ButtonProps } from '../src';
 
@@ -23,9 +24,14 @@ const Template: Story<ButtonProps> = args => (
     width: 300,
   }}>
     <Button {...args} >Обычная</Button>
-    <Button disabled={true} {...args} >Неактивная</Button>
+    <Button disabled={true} {...args} >Обычная неактивная</Button>
     <Button transparent={true} {...args} >Прозрачная</Button>
     <Button transparent={true} disabled={true} {...args} >Прозрачная неактивная</Button>
+    <Button accent={true} {...args} >Акцентная</Button>
+    <Button accent={true} disabled={true} {...args} >Акцентная неактивная</Button>
+    <Button accent={true} transparent={true} {...args} >Акцентная прозрачная</Button>
+    <Button accent={true} transparent={true} disabled={true} {...args} >Акцентная прозрачная неактивная</Button>
+    <Button fs={18} {...args} >Размер шрифта</Button>
   </div>
 );
 
